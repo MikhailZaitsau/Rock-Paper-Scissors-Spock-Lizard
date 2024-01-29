@@ -34,7 +34,9 @@ class Game
   end
 
   def round
+    system('clear')
     gesture_selection(@first_player)
+    system('clear')
     gesture_selection(@second_player)
     who_winner?
     again?
