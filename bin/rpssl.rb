@@ -1,6 +1,6 @@
 class Game
-  require '../lib/player'
-  require '../lib/gesture'
+  require './lib/player'
+  require './lib/gesture'
 
   GESTURES = { rock: 'Камень', scissors: 'Ножницы', paper: 'Бумага', lizard: 'Ящерица', spock: 'Спок' }.freeze
 
@@ -16,7 +16,7 @@ class Game
   private
 
   def puts_rules
-    file = File.open('../lib/rules', 'r')
+    file = File.open('./lib/rules', 'r')
     rules = file.read
     file.close
     puts rules
