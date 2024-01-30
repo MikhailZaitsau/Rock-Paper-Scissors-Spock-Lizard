@@ -36,7 +36,6 @@ class Game
   def round
     system('clear')
     gesture_selection(@first_player)
-    system('clear')
     gesture_selection(@second_player)
     who_winner?
     again?
@@ -47,6 +46,7 @@ class Game
     GESTURES.values.each_index { |index| puts "#{index + 1}) #{GESTURES.values[index]}" }
     gesture_number = gets.chomp
     check_selection(player, gesture_number)
+    system('clear')
   end
 
   def check_selection(player, gesture_number)
